@@ -2,26 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html{
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/public/fonts/montserrat/Montserrat-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/public/fonts/montserrat/Montserrat-Italic.ttf);
+  font-weight: 400;
+  font-style: italic;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+/* 500 medium */
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/public/fonts/montserrat/Montserrat-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+/* 600 semibold */
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/public/fonts/montserrat/Montserrat-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+/* 700 bold */
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/public/fonts/montserrat/Montserrat-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Open Sans */
+
+/* 400 Regular */
+@font-face {
+  font-family: 'Open Sans';
+  src: url(/public/fonts/opensans/OpenSans-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+/* 500 medium */
+@font-face {
+  font-family: 'Open Sans';
+  src: url(/public/fonts/opensans/OpenSans-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* 600 semibold */
+@font-face {
+  font-family: 'Open Sans';
+  src: url(/public/fonts/opensans/OpenSans-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* 700 bold */
+@font-face {
+  font-family: 'Open Sans';
+  src: url(/public/fonts/opensans/OpenSans-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
 }
