@@ -116,7 +116,7 @@ export default function Home() {
 
         {/* services */}
         <section className="py-[24px] px-[16px] lg:py-[48px]">
-          <h2 className="font-opensans text-grey-900 text-[28px] font-semibold text-center">
+          <h2 className="font-opensans text-grey-900 text-[28px] font-semibold text-center lg:font-bold lg:text-[32px]">
             Our Services
           </h2>
           <div className="grid grid-cols-2 pt-[24px] lg:grid-cols-4  lg:justify-center">
@@ -235,17 +235,27 @@ export default function Home() {
         </section>
 
         {/* what we do */}
-        <section className='px-[16px]'>
-          <div className='w-full h-[50vh]'>
-           <Image src={"/images/family.webp"} alt='' fill className='object-contain' />
+        <section className="px-[16px] py-[16px] lg:grid lg:grid-cols-2 lg:justify-center lg:items-center">
+          <div className="w-full h-[50vh] relative lg:w-[80%] lg:mx-auto">
+            <Image
+              src={"/images/family.webp"}
+              alt=""
+              fill
+              className="object-cover rounded-xl"
+            />
           </div>
-          <div>
-            <h2>Eco Touch</h2>
+          <div className='py-[16px] lg:w-[80%]'>
+            <h2 className='font-opensans font-semibold text-[28px] text-grey-800 lg:text-[32px] lg:font-bold lg:w-[80%]'>Eco-Touch Cleaning Service is ideal for:</h2>
+            <p className='font-montserrat text-grey-700 text-[14px] leading-[22px] mt-[12px] lg:text-[16px] lg:leading-[32px]'>
+              Families who want safe, chemical-free cleaning, Environmentally conscious homeowners, Landlords & letting agents looking for ethical cleaning partners, business owners who value wellness and sustainability.
+              </p>
           </div>
         </section>
 
         {/* what set us apart  */}
-        <section></section>
+        <section>
+
+        </section>
 
         {/* Abous us */}
         <section></section>
