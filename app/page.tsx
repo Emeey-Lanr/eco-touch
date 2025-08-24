@@ -235,7 +235,7 @@ export default function Home() {
         </section>
 
         {/* what we do */}
-        <section className="px-[16px] py-[16px] lg:grid lg:grid-cols-2 lg:justify-center lg:items-center">
+        <section className="px-[16px] py-[16px] lg:grid lg:grid-cols-2 lg:justify-center lg:items-center lg:py-[32px]">
           <div className="w-full h-[50vh] relative lg:w-[80%] lg:mx-auto">
             <Image
               src={"/images/family.webp"}
@@ -244,21 +244,356 @@ export default function Home() {
               className="object-cover rounded-xl"
             />
           </div>
-          <div className='py-[16px] lg:w-[80%]'>
-            <h2 className='font-opensans font-semibold text-[28px] text-grey-800 lg:text-[32px] lg:font-bold lg:w-[80%]'>Eco-Touch Cleaning Service is ideal for:</h2>
-            <p className='font-montserrat text-grey-700 text-[14px] leading-[22px] mt-[12px] lg:text-[16px] lg:leading-[32px]'>
-              Families who want safe, chemical-free cleaning, Environmentally conscious homeowners, Landlords & letting agents looking for ethical cleaning partners, business owners who value wellness and sustainability.
-              </p>
+          <div className="py-[16px] lg:w-[80%]">
+            <h2 className="font-opensans font-semibold text-[24px] text-grey-800 lg:text-[32px] lg:font-bold lg:w-[80%]">
+              Eco-Touch Cleaning Service is ideal for:
+            </h2>
+            <p className="font-montserrat text-grey-700 text-[14px] leading-[22px] mt-[12px] lg:text-[16px] lg:leading-[32px]">
+              Families who want safe, chemical-free cleaning, Environmentally
+              conscious homeowners, Landlords & letting agents looking for
+              ethical cleaning partners, business owners who value wellness and
+              sustainability.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <main>
+        {/* what set us apart  */}
+        <section className="bg-brand-900  py-[16px] relative lg:py-[48px] lg:my-[62px] overflow-hidden">
+          <div className="w-[74px] h-[110px] absolute right-0">
+            <Image src={"/images/background-eco.svg"} alt="" fill />
+          </div>
+
+          <div className="w-[74px] h-[110px] absolute top-[400px]">
+            <Image src={"/images/background-eco.svg"} alt="" fill />
+          </div>
+
+          <div className="w-[74px] h-[110px] absolute top-[700px] right-0 lg:bottom-[400px]">
+            <Image src={"/images/background-eco.svg"} alt="" fill />
+          </div>
+
+          <div className="w-[74px] h-[110px] absolute top-[1100px] lg:bottom-[0px]">
+            <Image src={"/images/background-eco.svg"} alt="" fill />
+          </div>
+
+          <div className="px-[32px]">
+            <h2 className="font-opensans text-center text-grey-50 text-[24px] lg:text-[32px] lg:font-bold">
+              Discover what set us apart
+            </h2>
+            <p className="font-montserrat text-[14px] text-grey-50 py-[12px] text-center lg:text-[16px] lg:w-[70%] lg:mx-auto">
+              know more about our distinguishing features and advantages that
+              put us ahead of our competitors.
+            </p>
+          </div>
+
+          <div className="px-[32px] lg:grid lg:grid-cols-[40%_200px_40%] lg:justify-center lg:items-center">
+            <div className="mt-[16px]">
+              <h2 className="font-opensans font-semibold text-[20px] text-grey-50 py-[16px] lg:text-center lg:text-[28px]">
+                Others
+              </h2>
+              <div className="flex lg:w-full">
+                <div className="flex items-center px-[8px] py-[8px] bg-brand-500 rounded-md lg:w-full lg:py-[12px]">
+                  <div className="w-[24px] h-[24px] bg-brand-800 flex justify-center items-center  rounded-full">
+                    <span className="relative block  w-[10px] h-[10px]">
+                      <Image
+                        src={"/icons/times.svg"}
+                        alt=""
+                        fill
+                        className=""
+                      />
+                    </span>
+                  </div>
+
+                  <p className="font-montserrat font-medium text-[14px] pl-[8px] w-[90%] text-grey-800 lg:text-[16px]">
+                    Use of harsh toxic chemical that are not safe for pets and
+                    children
+                  </p>
+                </div>
+                <div className="grid grid-rows-2">
+                  <div className="w-[12px]" />
+                  <div className="w-[12px] border-t-[1px] border-r-[1px] border-grey-50" />
+                </div>
+              </div>
+
+              <div className="w-full h-[32px] border-r-[1px] border-grey-50" />
+
+              <div className="flex">
+                <div className="flex items-center px-[8px] py-[8px] bg-brand-500 rounded-md lg:w-full lg:py-[12px]">
+                  <div className="w-[24px] h-[24px] bg-brand-800 flex justify-center items-center  rounded-full">
+                    <span className="relative block  w-[10px] h-[10px]">
+                      <Image
+                        src={"/icons/times.svg"}
+                        alt=""
+                        fill
+                        className=""
+                      />
+                    </span>
+                  </div>
+
+                  <p className="font-montserrat font-medium text-[14px] pl-[8px] w-[90%] text-grey-800 lg:text-[16px]">
+                    use of disposable wipes, single-use bottles and
+                    unsustainable packaging
+                  </p>
+                </div>
+                <div className="grid grid-rows-2">
+                  <div className="w-[12px] border-r-[1px] border-grey-50" />
+                  <div className="w-[12px] border-t-[1px] border-r-[1px] border-grey-50 " />
+                </div>
+              </div>
+
+              <div className="w-full h-[32px] border-r-[1px] border-grey-50" />
+
+              <div className="flex">
+                <div className="flex items-center px-[8px] py-[8px] bg-brand-500 rounded-md lg:py-[12px]">
+                  <div className="w-[24px] h-[24px] bg-brand-800 flex justify-center items-center  rounded-full">
+                    <span className="relative block  w-[10px] h-[10px]">
+                      <Image
+                        src={"/icons/times.svg"}
+                        alt=""
+                        fill
+                        className=""
+                      />
+                    </span>
+                  </div>
+
+                  <p className="font-montserrat font-medium text-[14px] pl-[8px] w-[90%] text-grey-800 lg:text-[16px]">
+                    Providing rushed, generic cleans and failing to build
+                    lasting relationships with clients
+                  </p>
+                </div>
+                <div className="grid grid-rows-2">
+                  <div className="w-[12px] border-r-[1px] border-grey-50" />
+                  <div className="w-[12px] border-t-[1px] border-r-[1px] border-grey-50 " />
+                </div>
+              </div>
+
+              <div className="w-full h-[32px] border-r-[1px] border-grey-50" />
+
+              <div className="flex">
+                <div className="flex items-center px-[8px] py-[8px] bg-brand-500 rounded-md lg:py-[12px]">
+                  <div className="w-[24px] h-[24px] bg-brand-800 flex justify-center items-center  rounded-full">
+                    <span className="relative block  w-[10px] h-[10px]">
+                      <Image
+                        src={"/icons/times.svg"}
+                        alt=""
+                        fill
+                        className=""
+                      />
+                    </span>
+                  </div>
+
+                  <p className="font-montserrat font-medium text-[14px] pl-[8px] w-[90%] text-grey-800 lg:text-[16px]">
+                    High employee turnover with little support or growth
+                    opportunities for local staff
+                  </p>
+                </div>
+                <div className="grid grid-rows-2">
+                  <div className="w-[12px] border-r-[1px] border-grey-50" />
+                  <div className="w-[12px] border-t-[1px] border-r-[1px] border-grey-50 " />
+                </div>
+              </div>
+
+              <div className="w-full h-[32px] border-r-[1px] border-grey-50" />
+
+              <div className="flex">
+                <div className="flex items-center px-[8px] py-[8px] bg-brand-500 rounded-md lg:py-[12px]">
+                  <div className="w-[24px] h-[24px] bg-brand-800 flex justify-center items-center  rounded-full">
+                    <span className="relative block  w-[10px] h-[10px]">
+                      <Image
+                        src={"/icons/times.svg"}
+                        alt=""
+                        fill
+                        className=""
+                      />
+                    </span>
+                  </div>
+
+                  <p className="font-montserrat font-medium text-[14px] pl-[8px] w-[90%] text-grey-800 lg:text-[16px]">
+                    Lack of transparency with pricing, unclear services and
+                    hidden product ingredients
+                  </p>
+                </div>
+                <div className="grid grid-rows-2">
+                  <div className="w-[12px] border-r-[1px] border-b-[1px] border-grey-50" />
+                  <div className="w-[12px]" />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center items-center py-[16px]">
+              <span className="relative w-[42px] h-[63px]">
+                <Image src={"/images/eco-touch-vector.svg"} alt="" fill />
+              </span>
+            </div>
+
+            <div className="lg:w-full">
+              <h2 className="font-opensans font-semibold text-[20px] ml-[12px] text-grey-50 py-[16px] lg:text-center lg:text-[28px]">
+                Eco Touch
+              </h2>
+              <div className="flex">
+                <div className="grid grid-rows-2">
+                  <div className="w-[12px]" />
+                  <div className="w-[12px] border-t-[1px] border-l-[1px] border-grey-50" />
+                </div>
+                <div className="flex items-center px-[8px] py-[8px] bg-brand-800 rounded-md lg:w-full  lg:py-[12px]">
+                  <div className="w-[24px] h-[24px] bg-brand-500 flex justify-center items-center  rounded-full">
+                    <span className="relative block  w-[10px] h-[10px]">
+                      <Image src={"/icons/mark.svg"} alt="" fill className="" />
+                    </span>
+                  </div>
+
+                  <p className="font-montserrat font-medium text-[14px] pl-[8px] w-[90%] text-grey-50 lg:text-[16px]">
+                    Use of biogradable, plant based product that are child and
+                    pet safe
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full h-[32px] border-l-[1px] border-grey-50" />
+
+              <div className="flex">
+                <div className="grid grid-rows-2">
+                  <div className="w-[12px] border-l-[1px] border-grey-50" />
+                  <div className="w-[12px] border-t-[1px] border-l-[1px] border-grey-50" />
+                </div>
+                <div className="flex items-center px-[8px] py-[8px] bg-brand-800 rounded-md lg:py-[12px]">
+                  <div className="w-[24px] h-[24px] bg-brand-500 flex justify-center items-center  rounded-full">
+                    <span className="relative block  w-[10px] h-[10px]">
+                      <Image src={"/icons/mark.svg"} alt="" fill className="" />
+                    </span>
+                  </div>
+
+                  <p className="font-montserrat font-medium text-[14px] pl-[8px] w-[90%] text-grey-50 lg:text-[16px]">
+                    We rely on reusable microfibre cloths, refillable bottles,
+                    and sustainable packaging. 
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full h-[32px] border-l-[1px] border-grey-50" />
+
+              <div className="flex">
+                <div className="grid grid-rows-2">
+                  <div className="w-[12px] border-l-[1px] border-grey-50" />
+                  <div className="w-[12px] border-t-[1px] border-l-[1px] border-grey-50" />
+                </div>
+                <div className="flex items-center px-[8px] py-[8px] bg-brand-800 rounded-md  lg:py-[12px]">
+                  <div className="w-[24px] h-[24px] bg-brand-500 flex justify-center items-center  rounded-full">
+                    <span className="relative block  w-[10px] h-[10px]">
+                      <Image src={"/icons/mark.svg"} alt="" fill className="" />
+                    </span>
+                  </div>
+
+                  <p className="font-montserrat font-medium text-[14px] pl-[8px] w-[90%] text-grey-50 lg:text-[16px]">
+                    We prioritise detailed, personalised cleans and build
+                    long-term relationships with clients
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full h-[32px] border-l-[1px] border-grey-50" />
+
+              <div className="flex">
+                <div className="grid grid-rows-2">
+                  <div className="w-[12px] border-l-[1px] border-grey-50" />
+                  <div className="w-[12px] border-t-[1px] border-l-[1px] border-grey-50" />
+                </div>
+                <div className="flex items-center px-[8px] py-[8px] bg-brand-800 rounded-md  lg:py-[12px]">
+                  <div className="w-[24px] h-[24px] bg-brand-500 flex justify-center items-center  rounded-full">
+                    <span className="relative block  w-[10px] h-[10px]">
+                      <Image src={"/icons/mark.svg"} alt="" fill className="" />
+                    </span>
+                  </div>
+
+                  <p className="font-montserrat font-medium text-[14px] pl-[8px] w-[90%] text-grey-50 lg:text-[16px]">
+                    Our future goal is to offer a supportive, growth-oriented
+                    workplace for local staff we sponsor. 
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full h-[32px] border-l-[1px] border-grey-50" />
+
+              <div className="flex">
+                <div className="grid grid-rows-2">
+                  <div className="w-[12px] border-l-[1px] border-b-[1px] border-grey-50" />
+                  <div className="w-[12px] " />
+                </div>
+                <div className="flex items-center px-[8px] py-[8px] bg-brand-800 rounded-md  lg:py-[12px]">
+                  <div className="w-[24px] h-[24px] bg-brand-500 flex justify-center items-center  rounded-full">
+                    <span className="relative block  w-[10px] h-[10px]">
+                      <Image src={"/icons/mark.svg"} alt="" fill className="" />
+                    </span>
+                  </div>
+
+                  <p className="font-montserrat font-medium text-[14px] pl-[8px] w-[90%] text-grey-50 lg:text-[16px]">
+                    We’re upfront with pricing, services, and product
+                    ingredients, no surprises
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* what set us apart  */}
-        <section>
-
-        </section>
-
         {/* Abous us */}
-        <section></section>
+        <section className="">
+          <div className="px-[16px]">
+            <div className="w-full h-[80vh]">
+              <Image
+                src={"/images/about us(1).webp"}
+                fill
+                alt=""
+                className="rounded-xl"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div className="px-[16px]">
+              <h2 className="text-[28px] font-opensans font-semibold text-grey-800">
+                About Us
+              </h2>
+              <p className="text-grey-700 text-[14px] font-montserrat leading-[23px]">
+                EcoTouch Cleaning Service is a Westyolkshire-based cleaning
+                company committed to providing safe, effective, and
+                environmentally responsible cleaning solutions for homes and
+                small businesses. We believe that a clean space should never
+                come at the cost of the environment or your health
+              </p>
+            </div>
+
+            <div className="bg-[#F3E9D8] px-[16px] py-[24px]">
+              <h5 className="text-[18px] font-opensans text-grey-800">
+                Founded on the principles of{" "}
+                <span className="font-bold">
+                  Trust, Transparency & Sustainability.
+                </span>
+              </h5>
+              <p>
+                EcoTouch was created to fill a growing gap in the local cleaning
+                industry: high-quality, affordable cleaning that respects both
+                people and the planet. At EcoTouch Cleaning Service, we believe
+                a clean space shouldn’t compromise your health, pets, or the
+                environment.
+              </p>
+            </div>
+
+            <div className="px-[16px]">
+              <h6 className="font-opensans text-[18px] text-grey-800">
+                <span className="">EcoTouch</span> is raising the standard of
+                what clean truly means.
+              </h6>
+              <p className="text-grey-700 text-[14px] font-opensans leading-[23px]">
+                Founded in Huddersfield, our mission is to deliver high-quality,
+                eco-friendly cleaning that’s plant-safe, pet-safe, and
+                toxin-free. From regular home and office cleaning to vet clinic
+                care and pet area sanitisation.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* our vision */}
         <section></section>
