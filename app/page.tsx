@@ -13,7 +13,7 @@ export default function Home() {
   }
   return (
     <div className="bg-bc relative w-full h-full">
-      <nav className="flex justify-between items-center  py-[16px] px-[16px] sticky z-[1] bg-bc/60 backdrop-blur-md   top-0 lg:px-[48px] lg:box-border">
+      <nav className="flex justify-between items-center  py-[16px] px-[16px] sticky z-[5] bg-bc/60 backdrop-blur-md   top-0 lg:px-[48px] lg:box-border">
         {/* Logo */}
         <div className="h-[78px] w-[78px]  relative md:w-[103px] md:h-[70px]">
           <Image
@@ -258,7 +258,7 @@ export default function Home() {
         </section>
       </main>
 
-      <main>
+      <main >
         {/* what set us apart  */}
         <section className="bg-brand-900  py-[16px] relative lg:py-[48px] lg:my-[62px] overflow-hidden">
           <div className="w-[74px] h-[110px] absolute right-0">
@@ -538,24 +538,24 @@ export default function Home() {
         </section>
 
         {/* Abous us */}
-        <section className="">
-          <div className="px-[16px]">
-            <div className="w-full h-[80vh]">
+        <section className="w-full mt-[32px] py-[16px] lg:grid lg:grid-cols-2 lg:justify-center">
+          <div className="px-[32px] py-[32px] w-full lg:py-[0] lg:px-0 ">
+            <div className="relative w-full h-[50vh] lg:h-full lg:w-[84%] lg:ml-auto">
               <Image
-                src={"/images/about us(1).webp"}
+                src={"/images/aboutUs.webp"}
                 fill
                 alt=""
-                className="rounded-xl"
+                className="rounded-xl object-cover"
               />
             </div>
           </div>
 
-          <div>
-            <div className="px-[16px]">
-              <h2 className="text-[28px] font-opensans font-semibold text-grey-800">
+          <div className="w-full">
+            <div className="px-[32px] ">
+              <h2 className="text-[28px] font-opensans font-semibold text-grey-800 pb-[16px] lg:text-[32px]">
                 About Us
               </h2>
-              <p className="text-grey-700 text-[14px] font-montserrat leading-[23px]">
+              <p className="text-grey-700 text-[14px] font-montserrat leading-[23px] lg:text-[16px] lg:w-[85%]  lg:leading-[26px]">
                 EcoTouch Cleaning Service is a Westyolkshire-based cleaning
                 company committed to providing safe, effective, and
                 environmentally responsible cleaning solutions for homes and
@@ -564,14 +564,14 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-[#F3E9D8] px-[16px] py-[24px]">
-              <h5 className="text-[18px] font-opensans text-grey-800">
+            <div className="bg-[#F3E9D8] px-[32px] py-[24px] my-[24px]">
+              <h5 className="text-[18px] font-opensans text-grey-800 pb-[16px] lg:w-[60%] lg:text-[24px]">
                 Founded on the principles of{" "}
                 <span className="font-bold">
                   Trust, Transparency & Sustainability.
                 </span>
               </h5>
-              <p>
+              <p className="text-grey-700 text-[14px] font-montserrat leading-[23px] lg:text-[16px] lg:w-[85%] lg:leading-[26px]">
                 EcoTouch was created to fill a growing gap in the local cleaning
                 industry: high-quality, affordable cleaning that respects both
                 people and the planet. At EcoTouch Cleaning Service, we believe
@@ -580,12 +580,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="px-[16px]">
-              <h6 className="font-opensans text-[18px] text-grey-800">
-                <span className="">EcoTouch</span> is raising the standard of
-                what clean truly means.
+            <div className="px-[32px] ">
+              <h6 className="font-opensans text-[18px] text-grey-800 pb-[16px] lg:w-[60%] lg:text-[24px]">
+                <span className="font-bold">EcoTouch</span> is raising the
+                standard of what clean truly means.
               </h6>
-              <p className="text-grey-700 text-[14px] font-opensans leading-[23px]">
+              <p className="text-grey-700 text-[14px] font-montserrat leading-[23px] lg:text-[16px] lg:w-[85%] lg:leading-[26px]">
                 Founded in Huddersfield, our mission is to deliver high-quality,
                 eco-friendly cleaning that’s plant-safe, pet-safe, and
                 toxin-free. From regular home and office cleaning to vet clinic
@@ -596,10 +596,127 @@ export default function Home() {
         </section>
 
         {/* our vision */}
-        <section></section>
+        <section className="px-[32px] py-[32px] lg:mt-[94px] lg:relative lg:px-[64px]">
+          <div className="lg:w-[75%] lg:relative lg:z-[2]">
+            <h2 className="text-[28px] font-opensans text-grey-800 font-semibold lg:text-[32px]">
+              Our Vision
+            </h2>
+            <p className="text-grey-700 text-[14px] font-montserrat leading-[23px] lg:text-[16px]  lg:leading-[26px]">
+              To deliver premium cleaning services using only non-toxic,
+              eco-certified products and reusable tools protecting your space,
+              your loved ones, and the environment with every clean. We’re
+              committed to creating safe, healthy spaces not just for people,
+              but also for pets and plants, because we believe cleanliness
+              should support all life in your home or business. We’re not just
+              cleaning, we’re building a company that
+            </p>
+          </div>
+
+          <div className="relative overflow-hidden lg:top-[-95px] lg:z-[1] lg:py-[16px] md:top-[unset]">
+            <div className="w-[1px] h-[90%] border-l-[2px] border-dashed border-grey-200 left-[40vw] bottom-0 absolute lg:hidden"/>
+        
+            <div className='hidden lg:block absolute w-[61vw] h-[5px] left-[12vw] rotate-[-20deg] top-[35vh] border-t-[4px] border-grey-200 border-dashed'/>
+            <div className='hidden lg:block absolute w-[61vw] h-[45%]  top-[50vh] left-[15vw] lg:rotate-[-10deg] rounded-tr-[400px] rounded-br-[500px] border-t-[4px] border-r-[4px] border-b-[4px] border-grey-200 border-dashed'/>
+            
+
+            
+            <div className="py-[24px] relative lg:block md:grid md:grid-cols-2 md:gap-4">
+              <div className="bg-[#ffff] py-[24px] rounded-xl shadow-xl lg:w-[386px] lg:relative lg:left-[60vw] lg:rotate-[10deg] md:rotate-0 md:w-full">
+                <div className="w-full h-[94px]">
+                  <div className="w-[30px] h-[30px] border-[1px] border-grey-200 rounded-full shadow-inner mx-auto">
+                    <span className="w-[20px] h-[20px] bg-brand-900 rounded-full block"></span>
+                  </div>
+                </div>
+                <div className="bg-[#F3E9D8] flex justify-center py-[32px] items-center px-[16px] w-[90%] rounded-xl mx-auto ">
+                  <div className="w-[90%] mx-auto">
+                    <h4 className="text-[24px] font-bold font-opensans text-grey-800 lg:w-[28px]">
+                      01
+                    </h4>
+                    <h4 className="text-[20px] font-bold font-opensans py-[20px] text-grey-800 lg:text-[24px]">
+                      Support
+                    </h4>
+                    <p className="text-[14px] leading-[23px] font-montserrat text-grey-700 lg:text-[16px]">
+                      we supports wellbeing with toxin-free spaces
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#ffff] py-[24px] rounded-xl shadow-xl my-[62px] lg:my-0  lg:relative lg:left-[2vw] lg:w-[386px] lg:rotate-[-10deg] md:rotate-0 md:w-full">
+                <div className="w-full h-[94px]">
+                  <div className="w-[30px] h-[30px] border-[1px] border-grey-200 rounded-full shadow-inner mx-auto">
+                    <span className="w-[20px] h-[20px] bg-brand-900 rounded-full block"></span>
+                  </div>
+                </div>
+                <div className="bg-[#F3E9D8] flex justify-center py-[32px] items-center px-[16px] w-[90%] rounded-xl mx-auto ">
+                  <div className="w-[90%] mx-auto">
+                    <h4 className="text-[24px] font-bold font-opensans text-grey-800 lg:w-[28px]">
+                      02
+                    </h4>
+                    <h4 className="text-[20px] font-bold font-opensans py-[20px] text-grey-800 lg:text-[24px]">
+                      Empowerment
+                    </h4>
+                    <p className="text-[14px] leading-[23px] font-montserrat text-grey-700 lg:text-[16px]">
+                      we empower comunities through job creation and development
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#ffff] py-[24px] rounded-xl shadow-xl lg:relative lg:w-[386px] lg:left-[60vw] lg:rotate-[10deg] md:rotate-0 md:w-full">
+                <div className="w-full h-[94px]">
+                  <div className="w-[30px] h-[30px] border-[1px] border-grey-200 rounded-full shadow-inner mx-auto">
+                    <span className="w-[20px] h-[20px] bg-brand-900 rounded-full block"></span>
+                  </div>
+                </div>
+                <div className="bg-[#F3E9D8] flex justify-center py-[32px] items-center px-[16px] w-[90%] rounded-xl mx-auto ">
+                  <div className="w-[90%] mx-auto">
+                    <h4 className="text-[24px] font-bold font-opensans text-grey-800 lg:w-[28px]">
+                      03
+                    </h4>
+                    <h4 className="text-[20px] font-bold font-opensans py-[20px] text-grey-800 lg:text-[24px]">
+                      Champion
+                    </h4>
+                    <p className="text-[14px] leading-[23px] font-montserrat text-grey-700 lg:text-[16px]">
+                      we champion sustainability in every service
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#ffff] py-[24px] rounded-xl shadow-xl mt-[62px] lg:mt-0 lg:relative lg:left-[3vw] lg:w-[386px] lg:rotate-[-10deg] md:rotate-0 md:w-full">
+                <div className="w-full h-[94px]">
+                  <div className="w-[30px] h-[30px] border-[1px] border-grey-200 rounded-full shadow-inner mx-auto">
+                    <span className="w-[20px] h-[20px] bg-brand-900 rounded-full block"></span>
+                  </div>
+                </div>
+                <div className="bg-[#F3E9D8] flex justify-center py-[32px] items-center px-[16px] w-[90%] rounded-xl mx-auto lg:py-[64px]">
+                  <div className="w-[90%] mx-auto">
+                    <h4 className="text-[24px] font-bold font-opensans text-grey-800 lg:w-[28px]">
+                      04
+                    </h4>
+                    <h4 className="text-[20px] font-bold font-opensans py-[20px] text-grey-800 lg:text-[24px]">
+                      Professional
+                    </h4>
+                    <p className="text-[14px] leading-[23px] font-montserrat text-grey-700 lg:text-[16px]">
+                      We’re here to make your space look good, feel fresh, and
+                      live well, with a professional touch
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* our mission */}
-        <section></section>
+        <section className='px-[32px]'>
+          <div className='relative w-full h-[25vh]'>
+            <Image src={"/images/ourMission.webp"} fill alt="" className='absolute' />
+             
+          </div>
+
+        </section>
 
         {/* Contact us */}
         <section></section>
