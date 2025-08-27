@@ -2,7 +2,9 @@
 import Sidebar from '@/components/Sidebar';
 import Image from 'next/image'
 import {useState} from "react"
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap-trial/ScrollTrigger';
+import { useEffect } from 'react';
 
 export default function Home() {
    const [sideBarStatus, setSideBarStatus] = useState<boolean>(false)
@@ -40,6 +42,7 @@ export default function Home() {
           </a>
           <a
             href="#about-us"
+
             className="font-montserrat font-medium text-grey-700 mr-[16px] text-[16px] h-[48px] flex justify-center items-center  hover:border-b-4  hover:border-brand-500 transition-border"
           >
             About Us
@@ -115,7 +118,7 @@ export default function Home() {
         </section>
 
         {/* services */}
-        <section className="py-[24px] px-[16px] lg:py-[48px]">
+        <section className="py-[24px] px-[16px] lg:pt-[48px] lg:pb-0">
           <h2 className="font-opensans text-grey-900 text-[28px] font-semibold text-center lg:font-bold lg:text-[32px]">
             Our Services
           </h2>
@@ -235,7 +238,7 @@ export default function Home() {
         </section>
 
         {/* what we do */}
-        <section className="px-[16px] py-[16px] lg:grid lg:grid-cols-2 lg:justify-center lg:items-center lg:py-[32px]">
+        <section className="px-[16px] py-[16px] lg:grid lg:grid-cols-2 lg:justify-center lg:items-center lg:py-[120px]">
           <div className="w-full h-[50vh] relative lg:w-[80%] lg:mx-auto">
             <Image
               src={"/images/family.webp"}
@@ -258,9 +261,9 @@ export default function Home() {
         </section>
       </main>
 
-      <main >
+      <main>
         {/* what set us apart  */}
-        <section className="bg-brand-900  py-[16px] relative lg:py-[48px] lg:my-[62px] overflow-hidden">
+        <section className="bg-brand-900  py-[16px] relative lg:py-[48px]  overflow-hidden">
           <div className="w-[74px] h-[110px] absolute right-0">
             <Image src={"/images/background-eco.svg"} alt="" fill />
           </div>
@@ -538,7 +541,7 @@ export default function Home() {
         </section>
 
         {/* Abous us */}
-        <section className="w-full mt-[32px] py-[16px] lg:grid lg:grid-cols-2 lg:justify-center">
+        <section className="w-full py-[32px] lg:grid lg:grid-cols-2 lg:justify-center lg:py-[120px]">
           <div className="px-[32px] py-[32px] w-full lg:py-[0] lg:px-0 ">
             <div className="relative w-full h-[50vh] lg:h-full lg:w-[84%] lg:ml-auto">
               <Image
@@ -596,7 +599,7 @@ export default function Home() {
         </section>
 
         {/* our vision */}
-        <section className="px-[32px] py-[32px] lg:mt-[94px] lg:relative lg:px-[64px]">
+        <section className="px-[32px] pb-[32px] lg:pb-[120px] lg:relative lg:px-[64px]">
           <div className="lg:w-[75%] lg:relative lg:z-[2]">
             <h2 className="text-[28px] font-opensans text-grey-800 font-semibold lg:text-[32px]">
               Our Vision
@@ -613,13 +616,11 @@ export default function Home() {
           </div>
 
           <div className="relative overflow-hidden lg:top-[-95px] lg:z-[1] lg:py-[16px] md:top-[unset]">
-            <div className="w-[1px] h-[90%] border-l-[2px] border-dashed border-grey-200 left-[40vw] bottom-0 absolute lg:hidden"/>
-        
-            <div className='hidden lg:block absolute w-[61vw] h-[5px] left-[12vw] rotate-[-20deg] top-[35vh] border-t-[4px] border-grey-200 border-dashed'/>
-            <div className='hidden lg:block absolute w-[61vw] h-[45%]  top-[50vh] left-[15vw] lg:rotate-[-10deg] rounded-tr-[400px] rounded-br-[500px] border-t-[4px] border-r-[4px] border-b-[4px] border-grey-200 border-dashed'/>
-            
+            <div className="w-[1px] h-[90%] border-l-[2px] border-dashed border-grey-200 left-[40vw] bottom-0 absolute lg:hidden" />
 
-            
+            <div className="hidden lg:block absolute w-[61vw] h-[5px] left-[12vw] rotate-[-20deg] top-[35vh] border-t-[4px] border-grey-200 border-dashed" />
+            <div className="hidden lg:block absolute w-[61vw] h-[45%]  top-[50vh] left-[15vw] lg:rotate-[-10deg] rounded-tr-[400px] rounded-br-[500px] border-t-[4px] border-r-[4px] border-b-[4px] border-grey-200 border-dashed" />
+
             <div className="py-[24px] relative lg:block md:grid md:grid-cols-2 md:gap-4">
               <div className="bg-[#ffff] py-[24px] rounded-xl shadow-xl lg:w-[386px] lg:relative lg:left-[60vw] lg:rotate-[10deg] md:rotate-0 md:w-full">
                 <div className="w-full h-[94px]">
@@ -710,19 +711,210 @@ export default function Home() {
         </section>
 
         {/* our mission */}
-        <section className='px-[32px]'>
-          <div className='relative w-full h-[25vh]'>
-            <Image src={"/images/ourMission.webp"} fill alt="" className='absolute' />
-             
+        <section className="px-[32px] pb-[32px] lg:px-[64px] lg:pb-[120px]">
+          <div className="relative w-full h-[25vh] flex justify-center items-center lg:h-[30vh]">
+            <Image
+              src={"/images/ourMission.webp"}
+              fill
+              alt=""
+              className="absolute rounded-xl object-cover"
+            />
+            <h2 className="text-[28px] font-opensans font-semibold text-grey-50 relative lg:text-[32px] ">
+              Our Mission
+            </h2>
           </div>
 
+          <div>
+            <div className="grid grid-cols-[20px_95%] gap-3 py-[32px] lg:w-[50%] lg:py-[64px]">
+              <span className="w-full h-[20px] bg-brand-900 flex justify-center items-center rounded-full font-montserrat text-grey-50 text-[20px]">
+                *
+              </span>
+              <p className="text-grey-700 font-montserrat leading-[26px] text-[14px] lg:text-[16px]">
+                To become Yolkshire’s most trusted eco-cleaning brand and to
+                grow into a business that grows our impact and workforce.
+                EcoTouch aims to be a regional leader in ethical cleaning
+                services, supporting local employment and contributing to the
+                green economy and inclusive opportunities.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-[20px_95%] gap-3 lg:w-[50%] lg:ml-auto">
+              <span className="w-full h-[20px] bg-brand-900 flex justify-center items-center rounded-full font-montserrat text-grey-50 text-[20px]">
+                *
+              </span>
+              <p className="text-grey-700 font-montserrat leading-[26px] text-[14px] lg:text-[16px]">
+                We aim to be a platform that create second-chance employment
+                pathways, offering work to individuals rebuilding their lives,
+                and contributing positively to the community.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Contact us */}
-        <section></section>
+        <section className="px-[32px] py-[32px] lg:w-[87%] lg:mx-auto lg:grid lg:grid-cols-[45%_45%] justify-between">
+          <div className="pb-[16px]">
+            <h2 className="font-opensans text-[28px] text-grey-800 font-semibold lg:text-[32px]">
+              Contact Us
+            </h2>
+            <p className="leading-[26px] text-[14px] font-montserrat text-grey-700 lg:text-[16px]">
+              By filling the form you can reach out to us and if you have any
+              question, we will be happy to hear from you.
+            </p>
+          </div>
+
+          <form className="bg-brand-900 rounded-xl mt-[28px] px-[28px] py-[24px] lg:mt-0 lg:py-[48px]">
+            <div>
+              <label className="text-[14px] text-grey-50 font-montserrat block lg:text-[16px]">
+                Name
+              </label>
+              <input
+                type="text"
+                name=""
+                id=""
+                className="w-full text-[14px] text-grey-50 bg-brand-900 font-montserrat h-[40px] rounded-xl border border-grey-50 px-2 focus:outline-brand-500 focus:border-0 transition duration-700 lg:h-[46px]"
+              />
+            </div>
+
+            <div className="py-[16px]">
+              <label className="text-[14px] text-grey-50 font-montserrat block lg:text-[16px]">
+                Email
+              </label>
+              <input
+                type="email"
+                name=""
+                id=""
+                className="w-full text-[14px] text-grey-50 bg-brand-900 font-montserrat h-[40px] rounded-xl border border-grey-50 px-2 focus:outline-brand-500 focus:border-0 transition duration-700 lg:h-[46px]"
+              />
+            </div>
+
+            <div>
+              <label className="text-[14px] text-grey-50 font-montserrat block lg:text-[16px]">
+                Message
+              </label>
+              <textarea
+                name=""
+                id=""
+                className="h-[120px] text-grey-[14px] py-[8px] rounded-xl px-2 w-full text-grey-50 bg-brand-900 resize-none border border-grey-50 focus:outline-brand-500 focus:border-0 transition duration-700 lg:h-[92px]"
+              ></textarea>
+            </div>
+
+            <div className="grid grid-cols-[16px_98%] gap-2 py-[16px]">
+              <button className="w-[16px] h-[16px] rounded-sm border border-grey-50 flex justify-center items-center  ">
+                {" "}
+                <span className="w-[8px] rounded-full h-[8px] bg-brand-100"></span>{" "}
+              </button>
+              <p className="font-montserrat text-[12px] text-grey-50 ml-[4px] lg:text-[14px]">
+                Signup for our email lists, updates, promotion and more
+              </p>
+            </div>
+
+            <div>
+              <button className="w-full text-grey-50 bg-brand-500 rounded-full h-[40px] font-opensans flex justify-center items-center font-semibold lg:h-[46px]">
+                Contact us
+                <span className="relative w-[16px] h-[16px]">
+                  <Image src={"/icons/arrow-forward.svg"} alt="" fill />
+                </span>
+              </button>
+            </div>
+          </form>
+        </section>
       </main>
 
-      <footer></footer>
+      <footer className="relative overflow-hidden bg-brand-900  lg:mt-[120px]">
+        <div className="w-[74px] h-[110px] absolute right-0 lg:top-[20px]">
+          <Image src={"/images/background-eco.svg"} alt="" fill />
+        </div>
+
+        <div className="w-[74px] h-[110px] absolute lg:top-[30px]">
+          <Image src={"/images/background-eco.svg"} alt="" fill />
+        </div>
+
+        <div className="w-[74px] h-[110px] absolute top-[10px] right-0 lg:top-[250px] lg:right-[400px]">
+          <Image src={"/images/background-eco.svg"} alt="" fill />
+        </div>
+
+        <div className="w-[74px] h-[110px] absolute top-[10px] lg:top-[220px] lg:left-[400px]">
+          <Image src={"/images/background-eco.svg"} alt="" fill />
+        </div>
+
+        <div className="w-full h-[32px] rounded-b-3xl bg-bc" />
+
+        <div className="px-[32px] pb-[32px] lg:py-[16px]">
+          <div className="relative w-[42px] h-[63px] lg:mx-auto">
+            <Image src={"/images/eco-touch-vector.svg"} alt="" fill />
+          </div>
+          <h2 className="text-grey-50 font-bold text-[28px] text-center">
+            EcoTouch
+          </h2>
+          <p className="font-montserrat text-[14px] italic text-grey-50 text-center">
+            "created to fill a growing gap in the local cleaning industry"
+          </p>
+        </div>
+
+        <div className="px-[32px] pb-[32px] lg:flex lg:justify-center lg:items-center lg:pb-[16px]">
+          <div className="grid grid-cols-[16px_95%] gap-2 items-center">
+            <span className="h-[16px] relative w-[16px]">
+              <Image src={"/icons/location.svg"} alt="" fill />
+            </span>
+            <p className="text-grey-50 font-montserrat text-[14px]">
+              Huddersfield, West Yorkshire
+            </p>
+          </div>
+
+          <div className="grid grid-cols-[16px_95%] gap-2 items-center py-[16px] lg:py-0 lg:px-[12px]">
+            <span className="h-[16px] relative w-[16px]">
+              <Image src={"/icons/mail.svg"} alt="" fill />
+            </span>
+            <p className="text-grey-50 font-montserrat text-[14px]">
+              info@ecotouchclean.co.uk
+            </p>
+          </div>
+
+          <div className="grid grid-cols-[16px_95%] gap-2 items-center">
+            <span className="h-[16px] relative w-[16px]">
+              <Image src={"/icons/phone.svg"} alt="" fill />
+            </span>
+            <p className="text-grey-50 font-montserrat text-[14px]">
+              + 44 7867 286358
+            </p>
+          </div>
+        </div>
+
+        <div className="px-[32px] pb-[32px] lg:flex lg:justify-center lg:items-center lg:px-[16px]">
+          <a
+            href="#"
+            className="block text-grey-50 font-montserrat lg:text-[16px]"
+          >
+            Home
+          </a>
+          <a
+            href="#"
+            className="block text-grey-50 font-montserrat py-[16px] lg:py-0 lg:text-[16px] lg:px-[12px]"
+          >
+            Services
+          </a>
+          <a
+            href="#"
+            className="block text-grey-50 font-montserrat pb-[16px] lg:py-0 lg:text-[16px] lg:pr-[12px]"
+          >
+            About us
+          </a>
+          <a
+            href="#"
+            className="block text-grey-50 font-montserrat lg:text-[16px]"
+          >
+            Contact us
+          </a>
+        </div>
+
+        <div className="border-t border-grey-50/30 px-[32px] py-[16px]">
+          <p className="text-grey-50 font-montserrat text-[12px] text-center ">
+            {" "}
+            Copyright &copy; 2025 Touch Cleaning Services - All Rights Reserved{" "}
+          </p>
+        </div>
+      </footer>
 
       <Sidebar sideBarStatus={sideBarStatus} handleSidebar={handleSideBar} />
     </div>
