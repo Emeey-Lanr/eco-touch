@@ -1,7 +1,7 @@
 'use client'
 import Sidebar from '@/components/Sidebar';
 import Image from 'next/image'
-import {useState, useRef} from "react"
+import {useState, useRef, ChangeEvent, FormEvent} from "react"
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect } from 'react';
@@ -9,8 +9,25 @@ import { useEffect } from 'react';
 gsap.registerPlugin(ScrollTrigger)
 export default function Home() {
   const root = useRef<HTMLDivElement | null>(null)
-   const [sideBarStatus, setSideBarStatus] = useState<boolean>(false)
 
+  const [sideBarStatus, setSideBarStatus] = useState<boolean>(false)
+  const [formData, setFormData] = useState({ name: "", email: "", message: "", newsLetter: false })
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, type, value, checked } = e.target as HTMLInputElement 
+    
+    setFormData({...formData, [name]: type === "checkbox" ? checked : value})
+  }  
+
+  const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    console.log(formData)
+    const phoneNumber = `+447867286358`;
+    const text = `Name:${formData.name}%0AEmail:${formData.email}%0AMessage:${formData.message}%0ASubscribeToNewsLetter:${formData.newsLetter}`
+    const url = `https://wa.me/${phoneNumber}?text=${text}`
+    window.open(url, "_blank")
+    
+  }
   useEffect(()=>{
     if (window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
     
@@ -819,15 +836,20 @@ export default function Home() {
             </p>
           </div>
 
-          <form className="revealY bg-brand-900 rounded-xl mt-[28px] px-[28px] py-[24px] lg:mt-0 lg:py-[48px]">
+          <form
+            onSubmit={handleSubmit}
+            className="revealY bg-brand-900 rounded-xl mt-[28px] px-[28px] py-[24px] lg:mt-0 lg:py-[48px]"
+          >
             <div>
               <label className="text-[14px] text-grey-50 font-montserrat block lg:text-[16px]">
                 Name
               </label>
               <input
                 type="text"
-                name=""
-                id=""
+                name="name"
+                required
+                value={formData.name}
+                onChange={handleChange}
                 className="w-full text-[14px] text-grey-50 bg-brand-900 font-montserrat h-[40px] rounded-xl border border-grey-50 px-2 focus:outline-brand-500 focus:border-0 transition duration-700 lg:h-[46px]"
               />
             </div>
@@ -837,9 +859,11 @@ export default function Home() {
                 Email
               </label>
               <input
+                required
                 type="email"
-                name=""
-                id=""
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="w-full text-[14px] text-grey-50 bg-brand-900 font-montserrat h-[40px] rounded-xl border border-grey-50 px-2 focus:outline-brand-500 focus:border-0 transition duration-700 lg:h-[46px]"
               />
             </div>
@@ -849,24 +873,47 @@ export default function Home() {
                 Message
               </label>
               <textarea
-                name=""
-                id=""
+                required
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 className="h-[120px] text-grey-[14px] py-[8px] rounded-xl px-2 w-full text-grey-50 bg-brand-900 resize-none border border-grey-50 focus:outline-brand-500 focus:border-0 transition duration-700 lg:h-[92px]"
               ></textarea>
             </div>
 
             <div className="grid grid-cols-[16px_98%] gap-2 py-[16px]">
-              <button className="w-[16px] h-[16px] rounded-sm border border-grey-50 flex justify-center items-center  ">
-                {" "}
-                <span className="w-[8px] rounded-full h-[8px] bg-brand-100"></span>{" "}
-              </button>
+              <label
+                htmlFor="checkboxHide"
+                className="w-[16px] h-[16px] rounded-sm border border-grey-50 flex justify-center items-center "
+              >
+                <span
+                  className={
+                    formData.newsLetter
+                      ? "w-[8px] rounded-full h-[8px] bg-brand-100"
+                      : "w-[8px] rounded-full h-[8px]"
+                  }
+                />
+                <input
+                  onChange={handleChange}
+                  id="checkboxHide"
+                  name="newsLetter"
+                  checked={formData.newsLetter}
+                  hidden
+                  className=""
+                  type="checkbox"
+                />
+              </label>
+
               <p className="font-montserrat text-[12px] text-grey-50 ml-[4px] lg:text-[14px]">
                 Signup for our email lists, updates, promotion and more
               </p>
             </div>
 
             <div>
-              <button className="w-full text-grey-50 bg-brand-500 rounded-full h-[40px] font-opensans flex justify-center items-center font-semibold lg:h-[46px]">
+              <button
+                type="submit"
+                className="w-full text-grey-50 bg-brand-500 rounded-full h-[40px] font-opensans flex justify-center items-center font-semibold lg:h-[46px]"
+              >
                 Contact us
                 <span className="relative w-[16px] h-[16px]">
                   <Image src={"/icons/arrow-forward.svg"} alt="" fill />
@@ -967,7 +1014,8 @@ export default function Home() {
         <div className="border-t border-grey-50/30 px-[32px] py-[16px]">
           <p className="text-grey-50 font-montserrat text-[12px] text-center ">
             {" "}
-            Copyright &copy; 2025 Touch Cleaning Services - All Rights Reserved{" "}
+            Copyright &copy; 2025 EcoTouch Cleaning Services - All Rights
+            Reserved{" "}
           </p>
         </div>
       </footer>
