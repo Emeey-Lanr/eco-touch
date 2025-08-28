@@ -148,7 +148,7 @@ export default function Home() {
           <Image
             src={"/images/hero.webp"}
             alt="hero"
-            className="rounded-xl absolute top-0"
+            className="rounded-xl absolute top-0 object-cover"
             fill
           />
           <div className="relative flex justify-center items-end h-full px-[24px] lg:items-center lg:justify-start lg:px-[48px]">
