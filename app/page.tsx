@@ -153,13 +153,9 @@ export default function Home() {
           />
           <div className="relative flex justify-center items-end h-full px-[24px] lg:items-center lg:justify-start lg:px-[48px]">
             <div className="mb-[48px] lg:mb-0">
-              <p className="font-montserrat italic text-[18px] text-gray-50 lg:text-[24px] lg:w-[500px]">
+              
+              <h1 className="font-opensans text-[32px] font-bold text-gray-50 mt-[8px] mb-[12px] md:font-medium lg:text-[48px] lg:w-[800px]">
                 From dust to trust, from living rooms to kennels; We clean it
-              </p>
-              <h1 className="font-opensans text-[32px] font-bold text-gray-50 mt-[8px] mb-[12px] lg:text-[64px] lg:w-[800px]">
-                Healthier homes where fresh meet{" "}
-                <span className="bg-brand-500 rounded-3xl p-[8px]">green</span>{" "}
-                plant
               </h1>
               <p className="font-montserrat text-[16px] text-grey-50 mb-[48px] leading-[24px] lg:text-[18px] lg:leading-[36px] lg:w-[600px] lg:mb-[64px]">
                 An Eco-friendly, sustainble, non toxic cleaning for{" "}
