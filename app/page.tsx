@@ -329,7 +329,7 @@ export default function Home() {
 
       <main>
         {/* what set us apart  */}
-        <section className="bg-brand-900  py-[16px] relative lg:py-[48px]  overflow-hidden">
+        <section className="bg-brand-900  py-[48px] relative lg:py-[48px]  overflow-hidden">
           <div className="w-[74px] h-[110px] absolute right-0">
             <Image src={"/images/background-eco.svg"} alt="" fill />
           </div>
